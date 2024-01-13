@@ -1,7 +1,8 @@
-import Card from './card';
 
 function Screen(){
-    return <div className=''> <Card /></div>
+    return (
+        <div className='w-full h-full bg-amber-500'></div>
+    )
 }
 
 export default Screen;
