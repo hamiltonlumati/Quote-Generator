@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
+    "/index.html",
     "./src/components/card.tsx",
     "./src/layout/screen.tsx",
     "./src/main.tsx",
@@ -32,5 +32,6 @@ export default {
       }
     }
   },
+  plugins: [],
 }
 
