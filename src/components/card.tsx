@@ -1,13 +1,9 @@
 function Card(){
     return(
-        <div className="box-border h-32 w-1/2 border-4 mx-auto">
+        <div className="h-32 w-1/2 mx-auto bg-white p-10">
             <p className="">É a vida!</p>
-            <p className=""></p>
-            <div>
-                <div>
-                    <div></div>
-                </div>
-            </div>
+            <p className="text-right">É a vida!</p>
+            <button className="border p-1 rounded">Generate</button>
         </div>
     );
 };
