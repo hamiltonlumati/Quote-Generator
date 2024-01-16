@@ -5,6 +5,6 @@ import Screen from './layout/screen';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Screen />    
+    <Screen />  
   </React.StrictMode>
 );
