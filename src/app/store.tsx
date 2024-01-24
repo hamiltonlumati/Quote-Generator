@@ -1,7 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import generatorReducer from '../assets/quoteGenerator/quoteGeneratorSlice';
 
 export const store = configureStore({
-    reducer:{},
+    reducer:{
+        generator: generatorReducer,
+    },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
