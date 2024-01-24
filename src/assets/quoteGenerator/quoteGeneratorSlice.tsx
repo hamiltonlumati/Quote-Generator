@@ -2,15 +2,18 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const quotes: { quote: string, author: string, color: string }[] = [
     { 
+        //0
         "quote": 'Time is money',
         "author": "Hamilton",
         "color": "000fff" 
     },
     { 
+        //1
         "quote": 'Time is money',
         "author": "Hamilton",
         "color": "000fff" },
     { 
+        //2
         "quote": 'Time is money',
         "author": "Hamilton",
         "color": "000fff" 
@@ -25,14 +28,19 @@ quotes[0] = {
 };
 
 export interface GeneratorState {
-    value: number
+    quote: string,
+    author: string,
+    color: string
 }
 
 var max: number = 2;
-var min: number = 0;
+var min: number = 0; 
+var initialIndex = Math.random() * (max - min) + min;
 
 const initialState: GeneratorState = {
-    value: Math.random() * (max - min) + min
+    quote: quotes[initialIndex].quote,
+    author: quotes[initialIndex].author,
+    color: quotes[initialIndex].color
 }
 
 export const generatorSlice = createSlice({
@@ -40,7 +48,11 @@ export const generatorSlice = createSlice({
     initialState,
     reducers : {
         generate: (state) => {
-            state.value = Math.random() * (max - min) + min
+            var newIndex: number = Math.random() * (max - min) + min;
+
+            state.quote = quotes[newIndex].quote;
+            state.author = quotes[newIndex].author;
+            state.color = quotes[newIndex].color;
         }
     }
 })
