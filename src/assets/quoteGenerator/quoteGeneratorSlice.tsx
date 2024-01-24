@@ -40,8 +40,6 @@ const initialState: GeneratorState = {
     author: quotes[initialIndex].author,
     color: quotes[initialIndex].color
 }
-var rootID: string = document.getElementById("root").className;
-rootID = 'w-full h-screen pt-52 absolute p-1 bg-'+quotes[initialIndex].color;
 
 export const generatorSlice = createSlice({
     name: 'generator',
