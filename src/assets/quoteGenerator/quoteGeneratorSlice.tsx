@@ -34,8 +34,13 @@ export interface GeneratorState {
 }
 
 var max: number = 2;
-var min: number = 0; 
-var initialIndex = Math.random() * (max - min) + min;
+var min: number = 0;
+
+min = Math.ceil(min);
+max = Math.floor(max);
+
+var initialIndex = Math.floor(Math.random() * (max - min + 1)) + min;
+console.log(initialIndex);
 
 const initialState: GeneratorState = {
     quote: quotes[initialIndex].quote,
