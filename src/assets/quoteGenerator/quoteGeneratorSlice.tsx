@@ -5,27 +5,20 @@ const quotes: { quote: string, author: string, color: string }[] = [
         //0
         "quote": 'Time is money',
         "author": "Hamilton",
-        "color": "000fff" 
+        "color": "blue" 
     },
     { 
         //1
         "quote": 'Time is money',
         "author": "Hamilton",
-        "color": "000fff" },
+        "color": "purple" },
     { 
         //2
         "quote": 'Time is money',
         "author": "Hamilton",
-        "color": "000fff" 
+        "color": "pink" 
     }
 ];
-
-
-quotes[0] = {
-    quote: 'Time is Money',
-    author: 'Love',
-    color: '000000'
-};
 
 export interface GeneratorState {
     quote: string,
@@ -47,14 +40,18 @@ const initialState: GeneratorState = {
     author: quotes[initialIndex].author,
     color: quotes[initialIndex].color
 }
+var rootID: string = document.getElementById("root").className;
+rootID = 'w-full h-screen pt-52 absolute p-1 bg-'+quotes[initialIndex].color;
 
 export const generatorSlice = createSlice({
     name: 'generator',
     initialState,
     reducers : {
         generate: (state) => {
-            var newIndex: number = Math.random() * (max - min) + min;
 
+            var newIndex: number = Math.floor(Math.random() * (max - min + 1)) + min;
+            var rootID: string = document.getElementById("root").className;
+            rootID = 'w-full h-screen pt-52 absolute p-1 bg-'+quotes[newIndex].color;
             state.quote = quotes[newIndex].quote;
             state.author = quotes[newIndex].author;
             state.color = quotes[newIndex].color;
