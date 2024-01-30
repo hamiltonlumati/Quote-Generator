@@ -46,10 +46,9 @@ export const generatorSlice = createSlice({
     initialState,
     reducers : {
         generate: (state) => {
-
             var newIndex: number = Math.floor(Math.random() * (max - min + 1)) + min;
-            var rootID: string = document.getElementById("root").className;
-            rootID = 'w-full h-screen pt-52 absolute p-1 bg-'+quotes[newIndex].color;
+            var rootID: HTMLElement = document.getElementById("screen")!;
+            rootID.className = 'w-full h-screen pt-20 absolute p-1 bg-'+quotes[newIndex].color;
             state.quote = quotes[newIndex].quote;
             state.author = quotes[newIndex].author;
             state.color = quotes[newIndex].color;
