@@ -9,12 +9,15 @@ export default {
   ],
   theme: {
     colors: {
+      'amber': '#d97706',
       'blue': '#1fb6ff',
       'purple': '#7e5bef',
       'pink': '#ff49db',
+      'cyan': '#22d3ee',
       'orange': '#ff7849',
       'green': '#13ce66',
-      'yellow': '#ffc82c',
+      'green-dark': '#16a34a',
+      'yellow': '#eab308',
       'gray-dark': '#273444',
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
@@ -35,5 +38,32 @@ export default {
     }
   },
   plugins: [],
+  safelist: [
+    //bg
+    'bg-amber',
+    'bg-blue',
+    'bg-purple',
+    'bg-pink',
+    'bg-orange',
+    'bg-green',
+    'bg-yellow',
+    'bg-gray',
+    'bg-amber',
+    'bg-green-dark',
+    'bg-cyan',
+
+    //text
+    'text-amber',
+    'text-blue',
+    'text-purple',
+    'text-pink',
+    'text-orange',
+    'text-green',
+    'text-yellow',
+    'text-gray',
+    'text-amber',
+    'text-cyan'
+
+  ]
 }
 

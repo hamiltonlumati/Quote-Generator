@@ -11,9 +11,9 @@ function Card(){
 
     return(
         <div className={"w-1/2 mx-auto bg-white p-10 rounded text-"+color}>
-            <p className=" ">{quote}</p>
-            <p className="text-right">{author}</p>
-            <button type="button" className="p-1 rounded bg-green text-white" onClick={() => dispatch(generate())}>Generate</button>
+            <p className="text-2xl">{quote}</p>
+            <p className="text-right text-lg">{author}</p>
+            <button type="button" className="p-1 rounded bg-green hover:bg-green-dark text-white text-lg" onClick={() => dispatch(generate())}>Generate</button>
         </div>
     );
 };
