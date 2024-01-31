@@ -1,5 +1,5 @@
 import type { RootState } from '../app/store';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import Card from "../components/card";
 import Nome from "../components/nome";
