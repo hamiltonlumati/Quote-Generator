@@ -8,7 +8,7 @@ function Screen(){
     const color = useSelector((state: RootState) => state.generator.color);
 
     return (
-        <div className={'w-full h-screen pt-20  bg-'+color} id="screen">
+        <div className={'pt-20  bg-'+color} id="screen">
             <Card />
             <Nome />
         </div>
